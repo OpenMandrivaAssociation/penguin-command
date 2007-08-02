@@ -33,11 +33,17 @@ Command is completely licensed under the GPL, excluding the music.
 rm -rf $RPM_BUILD_ROOT
 %{makeinstall_std}
 
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):command="%{_gamesbindir}/%{name}" icon="%{name}.png" \
-  needs="x11" section="More Applications/Games/Arcade" title="Penguin Command" \
-  longtitle="%{Summary}"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
+cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
+[Desktop Entry]
+Encoding=UTF-8
+Name=Penguin Command
+Comment=%{Summary}
+Exec=%{_gamesbindir}/%{name}
+Icon=%{name}
+Terminal=false
+Type=Application
+Categories=Game;ArcadeGame;
 EOF
 
 install -m644 %{SOURCE11} -D $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
@@ -58,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README NEWS AUTHORS
 %{_gamesbindir}/*
 %{_gamesdatadir}/%{name}
-%{_menudir}/%{name}
+%{_datadir}/applications/mandriva-%{name}.desktop
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
