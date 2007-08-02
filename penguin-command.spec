@@ -15,6 +15,7 @@ URL:		http://www.linux-games.com/penguin-command/index.html
 License:	GPL
 Group:		Games/Arcade
 BuildRequires:	SDL-devel audiofile-devel esound-devel SDL_mixer-devel SDL_image-devel
+Requires:	soundwrapper
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -39,7 +40,7 @@ cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 Encoding=UTF-8
 Name=Penguin Command
 Comment=%{Summary}
-Exec=%{_gamesbindir}/%{name}
+Exec=soundwrapper %{_gamesbindir}/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
