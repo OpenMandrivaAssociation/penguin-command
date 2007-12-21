@@ -16,6 +16,7 @@ License:	GPL
 Group:		Games/Arcade
 BuildRequires:	SDL-devel audiofile-devel esound-devel SDL_mixer-devel SDL_image-devel
 Requires:	soundwrapper
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This is a clone of the classic "Missile Command" Game, but it has better
