@@ -14,7 +14,9 @@ Source13:	%{name}.48.png
 URL:		http://www.linux-games.com/penguin-command/index.html
 License:	GPL
 Group:		Games/Arcade
-BuildRequires:	SDL-devel audiofile-devel esound-devel SDL_mixer-devel SDL_image-devel
+BuildRequires:	SDL-devel
+BuildRequires:	SDL_mixer-devel
+BuildRequires:	SDL_image-devel
 Requires:	soundwrapper
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -27,7 +29,7 @@ Command is completely licensed under the GPL, excluding the music.
 %setup -q
 
 %build
-%configure --bindir=%{_gamesbindir} --datadir=%{_gamesdatadir}
+%configure2_5x --bindir=%{_gamesbindir} --datadir=%{_gamesdatadir}
 %make
 
 %install
