@@ -1,6 +1,6 @@
 %define	name	penguin-command
 %define	version	1.6.11
-%define	release	%mkrel 6
+%define release	7
 %define	Summary	A clone of the classic Missile Command game
 
 Name:		%{name}
