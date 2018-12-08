@@ -1,6 +1,6 @@
 %define	name	penguin-command
 %define	version	1.6.11
-%define release	7
+%define release	8
 %define	Summary	A clone of the classic Missile Command game
 
 Name:		%{name}
@@ -18,7 +18,8 @@ BuildRequires:	pkgconfig(sdl)
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:  pkgconfig(zlib)
-Requires:	soundwrapper
+# Disable it, since soundwrapper is not anymore available for cooker. (penguin)
+#Requires:	soundwrapper
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
