@@ -14,7 +14,7 @@ Source13:	%{name}.48.png
 URL:		http://www.linux-games.com/penguin-command/index.html
 License:	GPL
 Group:		Games/Arcade
-BuildRequires:	SDL-devel
+BuildRequires:	pkgconfig(sdl)
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_image-devel
 Requires:	soundwrapper
