@@ -17,6 +17,7 @@ Group:		Games/Arcade
 BuildRequires:	pkgconfig(sdl)
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_image-devel
+BuildRequires:  pkgconfig(zlib)
 Requires:	soundwrapper
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
