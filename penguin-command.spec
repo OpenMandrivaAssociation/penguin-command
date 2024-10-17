@@ -11,7 +11,7 @@ Source0:	http://belnet.dl.sourceforge.net/sourceforge/penguin-command/%{name}-%{
 Source11:	%{name}.16.png
 Source12:	%{name}.32.png
 Source13:	%{name}.48.png
-URL:		http://www.linux-games.com/penguin-command/index.html
+URL:		https://www.linux-games.com/penguin-command/index.html
 License:	GPL
 Group:		Games/Arcade
 BuildRequires:	pkgconfig(sdl)
